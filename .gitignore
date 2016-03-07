@@ -4,3 +4,5 @@ pom.xml
 tdd-bdd-webinar.iml
 tdd-bdd-webinar.ipr
 tdd-bdd-webinar.iws
+out/
+onboarding*
