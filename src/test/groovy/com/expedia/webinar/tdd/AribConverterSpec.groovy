@@ -1,17 +1,20 @@
-import com.fede.ArabiConverter
+package com.expedia.webinar.tdd
+
 import spock.lang.Specification
 import spock.lang.Unroll
 
-class ConversorNumerosSpec extends Specification {
+class AribConverterSpec extends Specification {
+
+    // I  V X L C
 
     @Unroll
-    def "Numero #arabigo es #romano"(arabigo, romano) {
-        given:
-            ArabiConverter ab = new ArabiConverter()
-        when:
-            String converted = ab.convert(arabigo)
-        then:
-            romano == converted
+    def "Debe convertir un #arabigo a #romano"(arabigo, romano) {
+        given: "Dado un conversor de numeros arabigos a romanos"
+            ArabiConverter converter = new ArabiConverter()
+        when: "Cuando intento convertir el numero"
+            String numeroRomano = converter.toRomano(arabigo)
+        then: "Me lo retorna en romano"
+            numeroRomano == romano
         where:
             arabigo | romano
             1       | "I"
@@ -113,6 +116,7 @@ class ConversorNumerosSpec extends Specification {
             97      | "XCVII"
             98      | "XCVIII"
             99      | "XCIX"
-            100      | "C"
+            100     | "C"
     }
+
 }
