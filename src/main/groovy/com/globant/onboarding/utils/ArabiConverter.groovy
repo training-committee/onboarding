@@ -1,4 +1,4 @@
-package com.fede
+package com.globant.onboarding.utils
 
 class ArabiConverter {
     Map simbol = [

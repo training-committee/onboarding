@@ -1,8 +1,10 @@
-import com.fede.ArabiConverter
+package com.globant.onboarding.utils
+
+import com.globant.onboarding.utils.ArabiConverter
 import spock.lang.Specification
 import spock.lang.Unroll
 
-class ConversorNumerosSpec extends Specification {
+class ArabiConverterSpec extends Specification {
 
     @Unroll
     def "Numero #arabigo es #romano"(arabigo, romano) {

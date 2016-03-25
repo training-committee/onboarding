@@ -1,4 +1,4 @@
-package steps
+package com.globant.onboarding.utils.functional.steps
 
 this.metaClass.mixin(cucumber.api.groovy.Hooks)
 this.metaClass.mixin(cucumber.api.groovy.EN)

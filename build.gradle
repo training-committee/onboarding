@@ -5,6 +5,7 @@ buildscript {
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:1.3.3.RELEASE")
+        classpath('io.spring.gradle:dependency-management-plugin:0.5.1.RELEASE')
     }
 }
 
@@ -12,12 +13,21 @@ apply plugin: 'java'
 apply plugin: 'groovy'
 apply plugin: 'eclipse'
 apply plugin: 'idea'
+apply plugin: 'application'
 apply plugin: 'spring-boot'
 
+version='0.1.0'
+mainClassName='com.globant.onboarding.Application'
+
+jar.manifest{
+    attributes 'Implementation-Title':'OnboardingTool',
+            'Implementation-Version':version,
+            'Main-Class':mainClassName
+}
 
 jar {
     baseName = 'gs-spring-boot'
-    version = '0.1.0'
+    version = "${version}"
 }
 
 repositories {

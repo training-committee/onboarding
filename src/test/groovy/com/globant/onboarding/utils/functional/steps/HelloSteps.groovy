@@ -1,6 +1,6 @@
-package steps
+package com.globant.onboarding.utils.functional.steps
 
-import com.fede.ArabiConverter
+import com.globant.onboarding.utils.ArabiConverter
 
 
 this.metaClass.mixin(cucumber.api.groovy.Hooks)
