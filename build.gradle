@@ -9,7 +9,6 @@ buildscript {
     }
 }
 
-apply plugin: 'java'
 apply plugin: 'groovy'
 apply plugin: 'eclipse'
 apply plugin: 'idea'
@@ -33,10 +32,13 @@ jar {
     version = "${version}"
 }
 
+bootRun {
+    addResources = true
+}
+
 repositories {
     mavenCentral()
 }
-
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
@@ -47,6 +49,7 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-actuator")
     compile("org.springframework.boot:spring-boot-starter-security")
     compile("org.springframework.boot:spring-boot-starter-thymeleaf")
+    compile("org.springframework.boot:spring-boot-devtools")
 
     testCompile "org.spockframework:spock-core:1.0-groovy-2.4"
     testCompile "info.cukes:cucumber-jvm:1.2.4"
