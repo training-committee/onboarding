@@ -26,6 +26,10 @@ angular
             .when('/login', {
                 templateUrl: '/modules/auth/login.tpl.html',
                 controller: 'AuthCtrl'
+            })
+            .when('/trainer', {
+                templateUrl: '/modules/trainer/trainerView.tpl.html',
+                controller: 'CreateCourseCtrl'
             });
         $httpProvider.interceptors.push('XSRFInterceptor');
     }])

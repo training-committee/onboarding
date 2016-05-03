@@ -1,0 +1,40 @@
+<section role="main" tabindex="-1">
+    <div class="content-body" ng-controller="CreateCourseCtrl">
+        <div>
+            <section>
+                <h2>Create Course</h2>
+                <form>
+                    <div class="form-group input-group">
+                        <label for="title">Title</label>
+                        <input name="title" id="title" class="form-control" type="text"
+                               ng-model="course.title" required>
+                    </div>
+
+                    <div class="form-group input-group">
+                        <label for="videoUrl">Url</label>
+                        <input name="videoUrl" id="videoUrl" class="form-control" type="url"
+                               ng-model="course.videoUrl" required>
+                        <span ng-show="IsMatch" style="color:red">Title and URL are the same!</span>
+                    </div>
+
+                    <div class="form-group input-group">
+                        <label for="description">Description</label>
+                        <input name="description" id="description" class="form-control" type="text"
+                               ng-model="course.description">
+                    </div>
+
+                    <div class="form-group input-group">
+                        <label for="imageUrl">Image</label>
+                        <input name="imageUrl" id="imageUrl" class="form-control" type="file"
+                               ng-model="course.imageUrl" accept="image/*">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" ng-click="uploading()">
+                        Create
+                    </button>
+                </form>
+            </section>
+        </div>
+    </div>
+</section>
+

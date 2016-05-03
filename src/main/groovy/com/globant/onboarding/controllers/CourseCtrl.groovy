@@ -9,10 +9,6 @@ import org.springframework.web.bind.annotation.RequestMethod
 import org.springframework.web.bind.annotation.ResponseBody
 import org.springframework.web.bind.annotation.RestController
 
-/**
- * Created by frank on 7/4/2016.
- */
-
 @RestController
 @RequestMapping('/api/course')
 class CourseCtrl {

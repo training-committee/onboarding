@@ -2,7 +2,9 @@ package com.globant.onboarding.model
 
 class Course {
     def id
-    def name
+    def title
+    def videoUrl
     def description
-    def media
+    def imageUrl
+    def name
 }

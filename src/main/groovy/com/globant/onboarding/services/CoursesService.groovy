@@ -10,12 +10,12 @@ class CoursesService {
     def getCourses() {
         log.debug("Entering getCourses...")
         //TODO: logic to find the curse corresponding to an user
-        def res = [new Course(id: 1, name: "AngularJS", description: "AngularJS Course", media: "Test"),
-                   new Course(id: 2, name: "HTML5", description: "HTML5 Course", media: "Test"),
-                   new Course(id: 3, name: "CSS3", description: "CSS3 Course", media: "Test")]
+        def res = [new Course(id: 1, title:"Angul1", videoUrl:"https://github.com/training-committee/onboarding", name: "AngularJS", description: "AngularJS Course", imageUrl: "Test"),
+                   new Course(id: 2, title:"Angul1", videoUrl:"https://github.com/training-committee/onboarding", name: "HTML5", description: "HTML5 Course", imageUrl: "Test"),
+                   new Course(id: 3, title:"Angul1", videoUrl:"https://github.com/training-committee/onboarding", name: "CSS3", description: "CSS3 Course", imageUrl: "Test")]
     }
 
     Course findById(Long id){
-        return new Course(id: id, name: 'AngularJS', description: 'Angular Course', media: 'Test')
+        return new Course(id: id, title:'Angul1', videoUrl:'https://github.com/training-committee/onboarding', name: 'AngularJS', description: 'Angular Course', imageUrl: 'Test')
     }
 }

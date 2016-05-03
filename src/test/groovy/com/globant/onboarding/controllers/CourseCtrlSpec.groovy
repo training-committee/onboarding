@@ -4,9 +4,6 @@ import com.globant.onboarding.model.Course
 import com.globant.onboarding.services.CoursesService
 import spock.lang.Specification
 
-/**
- * Created by frank on 7/4/2016.
- */
 
 class CourseCtrlSpec extends Specification {
 
