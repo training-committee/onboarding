@@ -6,3 +6,7 @@ pom.xml
 *.ipr
 *.iws
 out/
+src/main/resources/bower_components/
+src/main/resources/node_modules/
+src/main/resources/static/css/styles.css
+npm-debug.log
