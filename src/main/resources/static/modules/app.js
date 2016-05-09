@@ -1,6 +1,23 @@
 angular
-    .module('app', ['ngRoute'])
-    .config(['$routeProvider', function ($routeProvider) {
+    .module('app', ['ngRoute', 'ngCookies'])
+    .factory('XSRFInterceptor', [ '$cookies', '$log', function ($cookies, $log) {
+
+        var XSRFInterceptor = {
+
+            request: function(config) {
+                var token = $cookies.get('XSRF-TOKEN');
+
+                if (token) {
+                    config.headers['X-XSRF-TOKEN'] = token;
+                    $log.info("X-XSRF-TOKEN: " + token);
+                }
+
+                return config;
+            }
+        };
+        return XSRFInterceptor;
+    }])
+    .config(['$routeProvider', '$httpProvider', function ($routeProvider, $httpProvider) {
         $routeProvider
             .when('/', {
                 templateUrl: '/modules/home/home.tpl.html',
@@ -10,6 +27,7 @@ angular
                 templateUrl: '/modules/auth/login.tpl.html',
                 controller: 'AuthCtrl'
             });
+        $httpProvider.interceptors.push('XSRFInterceptor');
     }])
     .run(['AuthService', function(AuthService){
         AuthService.init();
