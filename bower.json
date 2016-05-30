@@ -1,0 +1,16 @@
+{
+  "name": "onboarding",
+  "version": "0.0.0",
+  "authors": [
+    "training-committee <oww-training-committee@globant.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "^3.3.6"
+  }
+}

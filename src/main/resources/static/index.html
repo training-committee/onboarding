@@ -3,16 +3,23 @@
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-route.min.js"></script>
+    <link href="css/styles.css" rel="stylesheet">
 </head>
 
 <body ng-app="app">
 
-<div ng-view></div>
+<div ng-view class="container-fluid"></div>
 
 <script src="modules/app.js"></script>
 <script src="modules/home/HomeCtrl.js"></script>
 <script src="modules/auth/AuthService.js"></script>
 <script src="modules/auth/AuthCtrl.js"></script>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="js/vendor/jquery/jquery.min.js"></script>
+<script src="js/vendor/bootstrap/bootstrap.min.js"></script>
 </body>
 
 
