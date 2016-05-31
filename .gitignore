@@ -6,3 +6,6 @@ pom.xml
 *.ipr
 *.iws
 out/
+node_modules/
+bower_components/
+src/main/resources/static/css/

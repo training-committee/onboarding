@@ -1,0 +1,20 @@
+$brand-1: #2D3E50; //azul fuerte
+$brand-2: #69D0D1; //turquesa
+$brand-2-transparent: rgba(105,208,209, 0.8);
+$brand-3: #EF8680; // rosa
+$brand-4: #81909E;
+$brand-5: #7C95AF; // blue light
+$brand-6: #44596F; // blue light 2
+$brand-7: #32a1a2;
+$brand-8: #F9FAFC; //blanco hielo
+
+/* Override some bootstrap colors*/
+$text-color: $brand-4;
+
+$btn-primary-color: $brand-8;
+$btn-primary-bg: $brand-3;
+
+$navbar-inverse-color: #FFF;
+$navbar-inverse-link-color: #FFF;
+$navbar-inverse-bg: $brand-1;
+$navbar-inverse-link-hover-color: $brand-5;

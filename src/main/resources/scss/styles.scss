@@ -1,0 +1,187 @@
+@import '_custom_variables.scss';
+@import '_bootstrap.scss'; /* Took the bootstrap downloaded as bower dependency*/
+
+body {
+  padding-top: 50px;
+}
+
+.login-panel {
+    background: $brand-7;
+    border: 1px solid $brand-1;
+    border-radius: 5px;
+    color: $brand-8;
+    width: 400px;
+    margin: auto;
+}
+
+.login-content {
+  padding: $padding-small-horizontal;
+}
+
+.profile_pic {
+    width: 35%;
+    float: left;
+    padding-bottom: 20px;
+}
+
+.img-circle.profile_img {
+    width: 70%;
+    background: #fff;
+    margin-left: 15%;
+    z-index: 1000;
+    position: inherit;
+    margin-top: 20px;
+    border: 1px solid rgba(52, 73, 94, 0.44);
+    padding: 4px;
+}
+
+.profile_info {
+    padding: 15px 10px 10px;
+    width: 65%;
+    float: left;
+}
+
+.profile_info span {
+    font-size: 13px;
+    line-height: 30px;
+    color: #000;
+}
+.profile_info h2 {
+    font-size: 14px;
+    color: $brand-8;
+    margin: 0;
+    font-weight: 300;
+}
+/*
+ * Global add-ons
+ */
+
+.sub-header {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+/*
+ * Top navigation
+ * Hide default border to remove 1px line.
+ */
+.navbar-fixed-top {
+  border: 0;
+}
+
+/*
+ * Sidebar
+ */
+
+/* Hide for mobile, show later */
+.sidebar {
+  display: none;
+}
+@media (min-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 51px;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: block;
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+    background-color: $brand-2;
+    border-right: 1px solid #eee;
+  }
+}
+
+/* Sidebar navigation */
+.nav-sidebar {
+  margin-right: -21px; /* 20px padding + 1px border */
+  margin-bottom: 20px;
+  margin-left: -20px;
+}
+.nav-sidebar > li > a {
+  padding-right: 20px;
+  padding-left: 20px;
+  color: $brand-8;
+}
+.nav-sidebar > li > a:hover, .nav-sidebar > li > a:focus,
+.nav-sidebar > .active > a,
+.nav-sidebar > .active > a:hover,
+.nav-sidebar > .active > a:focus {
+  color: $brand-8;
+  background-color: $brand-7;
+  border-right: 5px solid $brand-3;
+}
+
+
+/*
+ * Main content
+ */
+
+.main {
+  padding: 20px;
+}
+@media (min-width: 768px) {
+  .main {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+.main .page-header {
+  margin-top: 0;
+}
+
+
+/*
+ * Placeholder dashboard ideas
+ */
+
+.placeholders {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.placeholders h4 {
+  margin-bottom: 0;
+}
+.placeholder {
+  margin-bottom: 20px;
+}
+.placeholder img {
+  display: inline-block;
+  border-radius: 50%;
+}
+
+/** Set bg palette colors*/
+.bg-brand-1 {
+  background-color: $brand-1;
+}
+.bg-brand-2 {
+  background-color: $brand-2;
+}
+
+.bg-brand-2-transparent {
+  background-color: $brand-2-transparent;
+}
+
+.bg-brand-3 {
+  background-color: $brand-3;
+}
+
+.bg-brand-4 {
+  background-color: $brand-4;
+}
+
+.bg-brand-5 {
+  background-color: $brand-5;
+}
+
+.bg-brand-6 {
+  background-color: $brand-6;
+}
+.bg-brand-7 {
+  background-color: $brand-7;
+}
+
+.bg-brand-8 {
+  background-color: $brand-8;
+}
