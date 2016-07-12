@@ -1,5 +1,5 @@
 angular
-    .module('app', ['ngRoute', 'ngCookies'])
+    .module('app', ['ngRoute', 'ngCookies', 'ngResource'])
     .factory('XSRFInterceptor', [ '$cookies', '$log', function ($cookies, $log) {
 
         var XSRFInterceptor = {

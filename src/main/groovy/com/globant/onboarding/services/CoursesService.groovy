@@ -14,4 +14,8 @@ class CoursesService {
                    new Course(id: 2, name: "HTML5", description: "HTML5 Course", media: "Test"),
                    new Course(id: 3, name: "CSS3", description: "CSS3 Course", media: "Test")]
     }
+
+    Course findById(Long id){
+        return new Course(id: id, name: 'AngularJS', description: 'Angular Course', media: 'Test')
+    }
 }
