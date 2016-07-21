@@ -47,3 +47,7 @@ This task watch the files localized in _src/main/resources/scss/_, if any of tho
 To run this task open a new console and do: 
 
 ``node_modules/grunt-cli/bin/grunt watch``
+
+### To run karma tests
+
+``node_modules/.bin/karma start --single-run``

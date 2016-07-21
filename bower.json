@@ -11,6 +11,10 @@
     "bower_components"
   ],
   "dependencies": {
-    "bootstrap-sass": "^3.3.6"
+    "bootstrap-sass": "^3.3.6",
+    "angular": "1.4.5",
+    "angular-route": "1.4.5",
+    "angular-mocks": "1.4.5",
+    "angular-resource": "1.4.5"
   }
 }

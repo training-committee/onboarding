@@ -1,9 +1,11 @@
 angular
     .module('app')
     .factory('AuthService', ['$http', '$location', '$rootScope', '$httpParamSerializerJQLike', function ($http, $location, $rootScope, $httpParamSerializerJQLike) {
-        var checkAuth = function(path){
+        var checkAuth = function (path) {
             if (auth.authenticated) {
-                $location.path(path == auth.loginPath || !path ? auth.homePath : path);
+                if (!path) {
+                    $location.path(auth.homePath);
+                }
             } else {
                 $location.path(auth.loginPath);
             }
@@ -18,7 +20,7 @@ angular
                     auth.authenticated = true;
                 }
                 checkAuth(path);
-            }, function (error) {
+            }, function () {
                 checkAuth(path);
             });
         };
@@ -40,10 +42,10 @@ angular
                         }
                     });
 
-                login.success(function (response) {
+                login.success(function () {
                     auth.authenticated = true;
                     $location.path(nextPath());
-                }).error(function (error) {
+                }).error(function () {
                     auth.authenticated = false;
                 });
             },
