@@ -1,40 +1,88 @@
-<section role="main" tabindex="-1">
-    <div class="content-body" ng-controller="CreateCourseCtrl">
-        <div>
-            <section>
-                <h2>Create Course</h2>
-                <form>
-                    <div class="form-group input-group">
-                        <label for="title">Title</label>
-                        <input name="title" id="title" class="form-control" type="text"
-                               ng-model="course.title" required>
-                    </div>
+<nav class="navbar navbar-inverse bg-brand-1 navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><img src="/img/logo.svg"></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Learning Plan</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#trainer">Create Course</a></li>
+            </ul>
+            <form class="navbar-form navbar-right">
+                <input type="text" class="form-control" placeholder="Search...">
+            </form>
+        </div>
+    </div>
+</nav>
 
-                    <div class="form-group input-group">
-                        <label for="videoUrl">Url</label>
-                        <input name="videoUrl" id="videoUrl" class="form-control" type="url"
-                               ng-model="course.videoUrl" required>
-                        <span ng-show="IsMatch" style="color:red">Title and URL are the same!</span>
-                    </div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar bg-brand-2">
+            <div class="profile clearfix">
+                <div class="profile_pic">
+                    <img src="img/user-default.jpg" alt="..." class="img-circle profile_img">
+                </div>
+                <div class="profile_info">
+                    <span>Welcome,</span>
+                    <h2>User Name</h2>
+                </div>
+            </div>
+            <ul class="nav nav-sidebar">
+                <li class="active"><a href="#">Dashoboard <span class="sr-only">(current)</span></a></li>
+                <li><a href="#">Learning Plan</a></li>
+            </ul>
 
-                    <div class="form-group input-group">
-                        <label for="description">Description</label>
-                        <input name="description" id="description" class="form-control" type="text"
-                               ng-model="course.description">
-                    </div>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <section role="main" tabindex="-1">
+                <div class="content-body" ng-controller="CreateCourseCtrl">
+                    <div>
+                        <section>
+                            <h2>Create Course</h2>
+                            <form>
+                                <div class="form-group">
+                                    <label for="title">* Title</label>
+                                    <input name="title" id="title" class="form-control" type="text"
+                                           ng-model="course.title" required>
+                                </div>
+                                <span ng-show="IsMatch" style="color:red">Title and URL are the same!</span>
 
-                    <div class="form-group input-group">
-                        <label for="imageUrl">Image</label>
-                        <input name="imageUrl" id="imageUrl" class="form-control" type="file"
-                               ng-model="course.imageUrl" accept="image/*">
-                    </div>
+                                <div class="form-group">
+                                    <label for="videoUrl">* Url</label>
+                                    <input name="videoUrl" id="videoUrl" class="form-control" type="url"
+                                           ng-model="course.videoUrl" required>
+                                </div>
 
-                    <button type="submit" class="btn btn-primary" ng-click="uploading()">
-                        Create
-                    </button>
-                </form>
+                                <div class="form-group">
+                                    <label for="description">Description</label>
+                                    <input name="description" id="description" class="form-control" type="text"
+                                           ng-model="course.description">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="imageUrl">Image</label>
+                                    <input name="imageUrl" id="imageUrl" class="form-control" type="file"
+                                           ng-model="course.imageUrl" accept="image/*">
+                                </div>
+
+                                <button type="submit" class="btn btn-primary" ng-click="uploading()">
+                                    Create
+                                </button>
+                            </form>
+                        </section>
+                    </div>
+                </div>
             </section>
         </div>
     </div>
-</section>
-
+</div>
