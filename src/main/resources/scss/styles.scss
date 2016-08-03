@@ -191,3 +191,20 @@ body {
 .bg-brand-8 {
   background-color: $brand-8;
 }
+
+/* Video Responsive*/
+
+.responsive-video {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 60px;
+  overflow: hidden;
+
+  embed, object, iframe, video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  } 
+}

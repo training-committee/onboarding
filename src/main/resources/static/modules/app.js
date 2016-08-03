@@ -29,7 +29,13 @@ angular
             })
             .when('/trainer', {
                 templateUrl: '/modules/trainer/trainerView.tpl.html',
-                controller: 'CreateCourseCtrl'
+                controller: 'CreateCourseCtrl'})
+            .when('/course/:courseId', {
+                templateUrl: '/modules/course/show.tpl.html',
+                controller: 'CourseCtrl'
+            })
+            .otherwise({
+                redirectTo: '/'
             });
         $httpProvider.interceptors.push('XSRFInterceptor');
     }])
