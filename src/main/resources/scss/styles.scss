@@ -106,7 +106,7 @@ body {
 }
 
 .x_title {
-    border-bottom: 2px solid @brand-5;
+    border-bottom: 2px solid $brand-5;
     padding: 1px 5px 6px;
     margin-bottom: 10px;
 }
@@ -264,6 +264,7 @@ body {
 .dashboard_graph {
     background: #fff;
     padding: 7px 10px;
+    
 }
 
 .dashboard_graph .col-md-9,
