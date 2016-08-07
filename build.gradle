@@ -6,6 +6,9 @@ buildscript {
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:1.3.3.RELEASE")
         classpath('io.spring.gradle:dependency-management-plugin:0.5.1.RELEASE')
+        classpath('se.transmode.gradle:gradle-docker:1.2')
+        classpath("com.moowork.gradle:gradle-node-plugin:0.13")
+        classpath('com.moowork.gradle:gradle-grunt-plugin:0.13')
     }
 }
 
@@ -14,6 +17,9 @@ apply plugin: 'eclipse'
 apply plugin: 'idea'
 apply plugin: 'application'
 apply plugin: 'spring-boot'
+apply plugin: 'docker'
+apply plugin: 'com.moowork.node'
+apply plugin: 'com.moowork.grunt'
 
 version='0.1.0'
 mainClassName='com.globant.onboarding.Application'
@@ -88,4 +94,22 @@ task functionalTest(type: Test) {
     classpath = sourceSets.functionalTest.runtimeClasspath
 }
 
+node {
+    download = true
+}
+
 check.dependsOn functionalTest
+
+task buildDocker(type: Docker) {
+    applicationName = 'rampapp'
+    dockerfile = file('Dockerfile')
+    doFirst {
+        copy {
+            from jar
+            into stageDir
+        }
+    }
+}
+
+build.dependsOn grunt_build
+

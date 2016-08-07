@@ -51,3 +51,7 @@ To run this task open a new console and do:
 ### To run karma tests
 
 ``node_modules/.bin/karma start --single-run``
+
+### Build Docker image
+
+``./gradlew clean npmInstall buildDocker``
