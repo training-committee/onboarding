@@ -30,6 +30,9 @@ angular
             .when('/trainer', {
                 templateUrl: '/modules/trainer/trainerView.tpl.html',
                 controller: 'CreateCourseCtrl'})
+            .when('/atila', {
+                templateUrl: '/modules/hackathon/hackathon.tpl.html',
+                controller: 'HackathonCtrl'})
             .when('/course/:courseId', {
                 templateUrl: '/modules/course/show.tpl.html',
                 controller: 'CourseCtrl'

@@ -1,0 +1,78 @@
+<nav class="navbar navbar-inverse bg-brand-1 navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><img src="/img/logo.svg"></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Learning Plan</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#trainer">Create Course</a></li>
+            </ul>
+            <form class="navbar-form navbar-right">
+                <input type="text" class="form-control" placeholder="Search...">
+            </form>
+        </div>
+    </div>
+</nav>
+<!-- form.html -->
+<div class="row">
+    <div class="col-sm-3 col-md-2 sidebar bg-brand-2">
+        <div class="profile clearfix">
+            <div class="profile_pic">
+                <img src="img/user-default.jpg" alt="..." class="img-circle profile_img">
+            </div>
+            <div class="profile_info">
+                <span>Welcome,</span>
+                <h2>User Name</h2>
+            </div>
+        </div>
+        <ul class="nav nav-sidebar">
+            <li class="active"><a href="#">Dashoboard <span class="sr-only">(current)</span></a></li>
+            <li><a href="#">Learning Plan</a></li>
+        </ul>
+
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+
+        <div id="form-container">
+
+            <div class="page-header text-center">
+                <h2>Be Altair</h2>
+
+                <!-- the links to our nested states using relative paths -->
+                <!-- add the active class if the state matches our ui-sref -->
+                <div id="status-buttons" class="text-center">
+                    <a ui-sref-active="active" ui-sref=".gorrion"><span>1</span> Gorrion</a>
+                    <a ui-sref-active="active" ui-sref=".paloma"><span>2</span> Paloma</a>
+                    <a ui-sref-active="active" ui-sref=".aguila"><span>3</span> Aguila</a>
+                    <a ui-sref-active="active" ui-sref=".altair"><span>4</span> Altair</a>
+                </div>
+            </div>
+
+            <!-- use ng-submit to catch the form submission and use our Angular function -->
+            <form id="signup-form" ng-submit="processForm()">
+
+                <!-- our nested state views will be injected here -->
+                <div id="form-views" ui-view></div>
+            </form>
+
+        </div>
+
+        <!-- show our formData as it is being typed -->
+        <pre>
+        {{ formData }}
+    </pre>
+
+
+    </div>
+</div>
