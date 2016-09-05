@@ -27,7 +27,7 @@
 
 <div class="container-fluid">
     <div class="row">
-        <div class="col-sm-4 col-md-4 sidebar bg-brand-2">
+        <div class="col-sm-3 col-md-2 sidebar bg-brand-2">
             <div class="profile clearfix">
                 <div class="profile_pic">
                     <img src="img/user-default.jpg" alt="..." class="img-circle profile_img">
@@ -40,14 +40,23 @@
             <ul class="nav nav-sidebar">
                 <li class="active"><a href="#">Dashoboard <span class="sr-only">(current)</span></a></li>
                 <li><a href="#">Learning Plan</a></li>
-            </ul>
-                <div>
-                    <iframe width="350" height="530" src="https://console.api.ai/api-client/demo/embedded/47b72979-4610-4e9e-81c1-c1b8a4ef1469"></iframe>
-                </div>
+            </ul>             
         </div>
-        <div class="col-sm-8 col-sm-offset-3 col-md-8 col-md-offset-2 main">
-            <h1 class="page-header">Dashboard</h1>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <div>
+                <h1 class="page-header">Dashboard</h1>
+            <button type="button" class="btn btn-info btn-lg rampy-button" data-toggle="modal" data-target="#myModal">Need Rampy's help?</button>
 
+            <!-- Modal -->
+            <div id="myModal" class="modal fade" role="dialog">
+              <div class="modal-dialog">                  
+                  <div class="modal-body">
+                    <iframe width="350" height="530" src="https://console.api.ai/api-client/demo/embedded/47b72979-4610-4e9e-81c1-c1b8a4ef1469"></iframe>                          
+                  </div>                
+              </div>
+            </div>
+            </div>
+  
             <div class="row placeholders">
                 <div class="col-xs-6 col-sm-3 placeholder">
                     <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
@@ -109,3 +118,32 @@
     </div>
 </div>
 
+<style type="text/css">
+    .rampy-button {
+        float: right;
+        color: white;
+        background-color: #69D0D1;
+        position: fixed;
+        right: 10px;
+        top: 63px;
+    }
+
+    .modal-dialog {
+        width: 1200px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+        margin-top: 25px;
+    }
+    .modal-body {
+        padding-right: 3px;
+    }
+    iframe {
+        float: right;
+        margin-top: 70px;
+        margin-left: 22px;
+        border-left-width: 0px;
+        border-right-width: 0px;
+        margin-right: 0px;
+    }
+    }
+</style>
