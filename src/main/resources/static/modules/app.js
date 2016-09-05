@@ -34,6 +34,10 @@ angular
                 templateUrl: '/modules/course/show.tpl.html',
                 controller: 'CourseCtrl'
             })
+            .when('/agent', {
+                templateUrl: '/modules/agent/rampy.html',
+                controller: 'HomeCtrl'
+            })
             .otherwise({
                 redirectTo: '/'
             });
